@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar.tsx';
 import RandomImage from './components-ri/index..tsx';
 import ListImage from './components-li/index.tsx';
 import WelcomePage from './Pages/welcome.tsx';
+import ErrorPage from './Pages/404.tsx';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/list" element={<ListImage />} />
-        {/* <Route path="/products" element={<ProductsPage />} /> */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
     </>
