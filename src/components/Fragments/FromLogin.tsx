@@ -6,7 +6,7 @@ const FormLogin: React.ComponentType<any> = () => {
     <form action="">
       <InputForm label="Email" type="email" placeholder="example@email.com" name="email"></InputForm>
       <InputForm label="Password" type="password" placeholder="*****" name="password"></InputForm>
-      <Button className="bg-blue-600 w-full">Login</Button>
+      <Button className="w-full">Login</Button>
     </form>
   );
 };

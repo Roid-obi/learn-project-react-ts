@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: 60px;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    backdrop-filter: blur(10px);
+    color: white;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5% ;
+    padding-right: 5%;
+    z-index: 6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand{
+    font-size: 25px;
+    color: white;
+    padding: 0px;
+    /* font-weight: 600; */
+
+    /* letter-spacing: 1px; */
+}
+
+.navbar-nav{
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    /* width: 40%; */
+    justify-content: space-between;
+}
+
+
+nav ul li .nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li{
+    margin-right: 15px;
+}
+
+nav ul li .active{
+    color: whitesmoke;
+}
+
+
+
+.input-ham{
+    display: none;
+}
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1000px){
+
+    .navbar-nav {
+        /* height: 100%; */
+        padding-top: 30%;
+        padding-bottom: 100%;
+        width: 40%;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-image: radial-gradient(100% 100% at 100% 0, #5adbff78 0, #5468ff80 100%);
+        /* backdrop-filter: blur(10px); */
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        /* z-index: -6; */
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .slidex{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul li .nav-link{
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    /* hamburger */
+    .menu-toggle{
+        display: flex;
+        flex-direction: column ;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .input-ham{
+        display: block;
+        opacity: 0;
+        position: absolute ;
+        width: 30px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+        margin-left: -2px;
+        top: -1px;
+    }
+
+    .menu-toggle span{
+        display: block;
+        width: 28px;
+        height: 4px;
+        background-color:rgba(245, 245, 245, 0.837) ;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+
+    /* hamburger menu animation*/
+
+    .menu-toggle span:nth-child(2){
+        transform-origin: 0 0; /* titik rotasi: sumbu x 0 , sumbu y 0 */
+    }
+
+    .menu-toggle span:nth-child(4){
+        transform-origin: 0 100%; /* titik rotasi: sumbu x 0 , sumbu y 0 */
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(2){
+        transform: rotate(45deg) translate(-1px,-1px);
+        background-color: white;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(4){
+        transform: rotate(-45deg) translate(-1px, 0);
+        background-color: white;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(3){
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    /* nav ul {
+        
+    } */
+    
+}
+
+
+/* mobile */
+@media screen and (max-width: 576px){
+    .navbar-nav {
+        /* height: 100%; */
+        padding-top: 45%;
+        padding-bottom: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.902);
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0;
+    }
+
+    .slidex{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul li .nav-link{
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* hamburger */
+    .menu-toggle{
+        display: flex;
+        flex-direction: column ;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .input-ham{
+        display: block;
+        opacity: 0;
+        position: absolute ;
+        width: 30px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+        margin-left: -2px;
+        top: -1px;
+    }
+
+    .menu-toggle span{
+        display: block;
+        width: 28px;
+        height: 4px;
+        background-color:rgba(245, 245, 245, 0.837) ;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+
+    /* hamburger menu animation*/
+
+    .menu-toggle span:nth-child(2){
+        transform-origin: 0 0; /* titik rotasi: sumbu x 0 , sumbu y 0 */
+    }
+
+    .menu-toggle span:nth-child(4){
+        transform-origin: 0 100%; /* titik rotasi: sumbu x 0 , sumbu y 0 */
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(2){
+        transform: rotate(45deg) translate(-1px,-1px);
+        background-color: white;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(4){
+        transform: rotate(-45deg) translate(-1px, 0);
+        background-color: white;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(3){
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+}
