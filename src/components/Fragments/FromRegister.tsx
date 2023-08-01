@@ -1,5 +1,6 @@
 import InputForm from "../Elements/input";
 import Button from "../Elements/Button";
+import { Link } from "react-router-dom";
 
 const FormRegister: React.ComponentType<any> = () => {
   return (
@@ -8,7 +9,9 @@ const FormRegister: React.ComponentType<any> = () => {
       <InputForm label="Email" type="email" placeholder="example@email.com" name="email"></InputForm>
       <InputForm label="Password" type="password" placeholder="*****" name="password"></InputForm>
       <InputForm label="Confirm Password" type="password" placeholder="*****" name="confirmpassword"></InputForm>
+      <Link to="/">
       <Button className="bg-blue-600 w-full">Register</Button>
+      </Link>
     </form>
   );
 };
