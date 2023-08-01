@@ -1,5 +1,5 @@
 import Button from "./Button";
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import './ri.css'
 import Card from "./Card";
