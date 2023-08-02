@@ -28,10 +28,10 @@ const Navbar = () => {
             <a href="/" className="nav-link">Home</a>
           </li>
           <li className="nav-item">
-            <a href="/random" className="nav-link">Image</a>
+            <a href="/image" className="nav-link">Image</a>
           </li>
           <li className="nav-item">
-            <a href="/list" className="nav-link">Images</a>
+            <a href="/images" className="nav-link">Images</a>
           </li>
           <li className="nav-item">
             <a href="/login" className="nav-link">Login</a>

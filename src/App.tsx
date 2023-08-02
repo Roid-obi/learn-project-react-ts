@@ -15,10 +15,10 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
-        <Route path="/random" element={<RandomImage />} />
+        <Route path="/image" element={<RandomImage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/list" element={<ListImage />} />
+        <Route path="/images" element={<ListImage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

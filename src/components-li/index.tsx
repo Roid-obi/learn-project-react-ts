@@ -14,17 +14,19 @@ const CardGrid = styled.div`
 `;
 
 const CardImage = styled.img`
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 20px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out; /* Add a transition for smooth movement */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transitions for both transform and box-shadow */
 
   &:hover {
-    transform: translateY(-6px); /* Move the card 5px upward when hovered */
+    transform: translateY(-6px); /* Move the card 6px upward when hovered */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
 `;
+
 
 const ListImage = () => {
   const [imageUrls, setImageUrls] = useState<string[]>([]);
